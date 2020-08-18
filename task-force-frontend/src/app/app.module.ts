@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { TaskModule } from './task/task.module';
 
@@ -24,6 +25,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     BrowserModule,
     AppRoutingModule,
     TaskModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
