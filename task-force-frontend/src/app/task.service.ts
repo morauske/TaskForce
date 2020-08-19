@@ -31,7 +31,9 @@ export class TaskService {
     return this.http.get<Task[]>(`http://18.217.160.143:8080/todos`);
   }
 
-  // TODO:  routine for patch
+  patchTask(id: number): Observable<any> {
+    return this.http.patch(`http://18.217.160.143:8080/todos/${id}`, null);
+  }
   
   updateTask(task: Task): Observable<Task> {
     return this.http.put<Task>(`http://18.217.160.143:8080/todos/`, task);
