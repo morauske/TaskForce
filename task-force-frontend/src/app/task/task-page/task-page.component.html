@@ -26,14 +26,14 @@
             <th scope="col">Completed?</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let task of tasks" [task]="task">
           <tr>
-            <td>1</td>
-            <td>Buy House</td>
-            <td>2020_0818</td>
-            <td>No</td>
+            <td>{{ task.id}}</td>
+            <td>{{ task.title}}</td>
+            <td>{{ task.createdOn}}</td>
+            <td>{{ task.completed }}</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td>2</td>
             <td>Cut Firewood</td>
             <td>2020_0818</td>
@@ -56,7 +56,7 @@
             <td>Task Force Project Work</td>
             <td>2020_0818</td>
             <td>No</td>
-          </tr>
+          </tr> -->
           </tbody>
         </table>
 
