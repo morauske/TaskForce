@@ -9,7 +9,7 @@
         <h6>Could our "Tasks" Link in the navbar be an <a href="https://ng-bootstrap.github.io/#/components/dropdown/examples">ng-bootstrap Dropdown</a> 
             that says Tasks but has options for: </h6>
             <ul>
-              <li>View Task List</li>
+              <button [routerLink]="['/tasks']" type="btn btn-secondary" id="view">View Task List</button>
               <li>Create New Task</li>
               <li>Edit Task</li>
             </ul>
