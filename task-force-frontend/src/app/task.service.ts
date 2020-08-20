@@ -20,7 +20,7 @@ export class TaskService {
   }
 
   deleteAllTasks(): Observable<any> {
-    return this.http.delete(`http://18.217.160.143:8080/todos/`);
+    return this.http.delete(`http://18.217.160.143:8080/todos/truncate`);
   }
 
   getTask(id: number): Observable<Task> {
