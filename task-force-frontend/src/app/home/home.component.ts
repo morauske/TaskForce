@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private taskService: TaskService) { 
   }
 
+  ngOnInit(): void {
+    
+  }
+    
+  deleteTasks () {
+    this.taskService.deleteAllTasks().subscribe(response => {
+      console.log(`Response = ${response}`);
+    });
+  }
 }
