@@ -18,7 +18,7 @@ cp dist/todos-api/* /deploy'''
 
       }
       steps {
-        sh 'ls'
+        sh 'aws s3 cp /deploy s3://tod'
       }
     }
 
